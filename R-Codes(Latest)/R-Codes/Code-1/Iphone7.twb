@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0606.1812                                -->
+<workbook source-build='9.3.3 (9300.16.0606.1812)' source-platform='win' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='iPhone7 _opin' inline='true' name='textscan.051xvu20afoi4514z8mgs0qj5ygh' version='9.3'>
+      <connection class='textscan' directory='C:/Users/Varsha Holennavar/Desktop/sentiment analysis/R-Codes/Code-1' filename='iPhone7 _opin.csv' password='' server=''>
+        <relation name='iPhone7 _opin.csv' table='[iPhone7 _opin#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='tweet' ordinal='1' />
+            <column datatype='date' name='created' ordinal='2' />
+            <column datatype='integer' name='number' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[iPhone7 _opin.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tweet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tweet]</local-name>
+            <parent-name>[iPhone7 _opin.csv]</parent-name>
+            <remote-alias>tweet</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[created]</local-name>
+            <parent-name>[iPhone7 _opin.csv]</parent-name>
+            <remote-alias>created</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[number]</local-name>
+            <parent-name>[iPhone7 _opin.csv]</parent-name>
+            <remote-alias>number</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[iPhone7 _opin.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Created' datatype='date' name='[created]' role='dimension' type='ordinal' />
+      <column caption='Number' datatype='integer' name='[number]' role='measure' type='quantitative' />
+      <column caption='Tweet' datatype='string' name='[tweet]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.510949' measure-ordering='alphabetic' measure-percentage='0.489051' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Twitter Sentiment Analysis for Iphone7 on 23rd September 2016</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='iPhone7 _opin' name='textscan.051xvu20afoi4514z8mgs0qj5ygh' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.051xvu20afoi4514z8mgs0qj5ygh'>
+            <column-instance column='[tweet]' derivation='None' name='[none:tweet:nk]' pivot='key' type='nominal' />
+            <column caption='Number' datatype='integer' name='[number]' role='measure' type='quantitative' />
+            <column-instance column='[number]' derivation='Sum' name='[sum:number:qk]' pivot='key' type='quantitative' />
+            <column caption='Tweet' datatype='string' name='[tweet]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[textscan.051xvu20afoi4514z8mgs0qj5ygh].[none:tweet:nk]' value='337' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.051xvu20afoi4514z8mgs0qj5ygh].[sum:number:qk]</rows>
+        <cols>[textscan.051xvu20afoi4514z8mgs0qj5ygh].[none:tweet:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='28'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.051xvu20afoi4514z8mgs0qj5ygh].[none:tweet:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
